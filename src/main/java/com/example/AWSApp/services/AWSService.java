@@ -91,4 +91,37 @@ public class AWSService {
         return convertedFile;
     }
 
+    // @Async annotation ensures that the method is executed in a different background thread
+    // but not consume the main thread.
+//    @Async
+//    public void uploadFile(final MultipartFile multipartFile) {
+////        LOGGER.info("File upload in progress.");
+//        try {
+//            final File file = convertMultiPartFileToFile(multipartFile);
+//            uploadFileToS3Bucket(bucketName, file);
+////            LOGGER.info("File upload is completed.");
+//            file.delete();    // To remove the file locally created in the project folder.
+//        } catch (final AmazonServiceException ex) {
+////            LOGGER.info("File upload is failed.");
+////            LOGGER.error("Error= {} while uploading file.", ex.getMessage());
+//        }
+//    }
+
+//    private File convertMultiPartFileToFile(final MultipartFile multipartFile) {
+//        final File file = new File(multipartFile.getOriginalFilename());
+//        try (final FileOutputStream outputStream = new FileOutputStream(file)) {
+//            outputStream.write(multipartFile.getBytes());
+//        } catch (final IOException ex) {
+////            LOGGER.error("Error converting the multi-part file to file= ", ex.getMessage());
+//        }
+//        return file;
+//    }
+
+//    private void uploadFileToS3Bucket(final String bucketName, final File file) {
+//        final String uniqueFileName = file.getName();
+////        LocalDateTime.now() + "_" +
+////        LOGGER.info("Uploading file with name= " + uniqueFileName);
+//        final PutObjectRequest putObjectRequest = new PutObjectRequest(bucketName, uniqueFileName, file);
+//        s3Client.putObject(putObjectRequest);
+//    }
 }

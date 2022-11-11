@@ -50,4 +50,14 @@ public class AWSController {
     public ResponseEntity<String> read(@PathVariable String fileName){
         return new ResponseEntity<>(service.readFile(fileName), HttpStatus.OK);
     }
+
+
+
+    //    @PostMapping(value= "/upload")
+//    public ResponseEntity<String> uploadFile(@RequestPart(value= "file") final MultipartFile multipartFile) {
+//        service.uploadFile(multipartFile);
+//        final String response = "[" + multipartFile.getOriginalFilename() + "] uploaded successfully.";
+//        return new ResponseEntity<>(response, HttpStatus.OK);
+//    }
+
 }
